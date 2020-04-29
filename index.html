@@ -4,31 +4,28 @@
 <head>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"
         integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw=" crossorigin="anonymous"></script>
-    <script lang="javascript" src="js/.full.min.js"></script>
-    <script lang="javascript" src="js/.min.js"></script>
+    <script lang="javascript" src="js/xlsx.full.min.js"></script>
+    <script lang="javascript" src="js/FileSaver.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Document</title>
+    <title>Lenguajes y Automatas 2</title>
 </head>
 
 <body class="container col-md-8 bg-info">
     <h4 class="text-center mb-2 mt-2">DATOS DEL ALUMNO</h4>
     <form action="">
-
-
         <div class="form-row">
             <div class="col-md-6 mb-2">
                 <label>Numero de Control</label>
-                <input type="text" class="form-control datos" id="NC" name="NC"
-                    placeholder="Numero de Control" required>
+                <input type="text" class="form-control datos" id="NC" name="NC" placeholder="Numero de Control"
+                    required>
             </div>
             <div class="col-md-6 mb-2">
                 <label>Nombre</label>
-                <input type="text" class="form-control datos" id="Nombre" name="Nombre" placeholder="Nombre"
-                    required>
+                <input type="text" class="form-control datos" id="Nombre" name="Nombre" placeholder="Nombre" required>
             </div>
             <div class="col-md-6 mb-2">
                 <label>Apellido Paterno</label>
@@ -84,45 +81,38 @@
                 <label>Nombre</label>
                 <input type="text" class="form-control" placeholder="Nombre">
             </div>
-            <button type="submit" id="button-a" onclick="enviarFormulario()"
-                class="btn btn-secondary mt-3 mb-5 btn-block">Enviar
+            <button type="submit" id="button-a" class="btn btn-secondary mt-3 mb-5 btn-block">Enviar
                 Formulario</button>
 
         </div>
     </form>
-    <!--
-    <script type="text/javascript">
-        function enviarFormulario() {
-            google.script.run.obtenerValores(document.forms[0]);
-        }
-    </script>-->
 </body>
-
 <script>
-        var wb = XLSX.utils.book_new();
-        wb.Props = {
-            Title: "Practica 3 LYAII",
-            Subject: "Prueba",
-            Author: "Victor Andaya",
-            CreatedDate: new Date(2020, 04, 29)
-        };
+     
+    var wb = XLSX.utils.book_new();
+    wb.Props = {
+            Title: "SheetJS Tutorial",
+            Subject: "Test",
+            Author: "Red Stapler",
+            CreatedDate: new Date(2017,12,19)
+    };
     
-        wb.SheetNames.push("Test Sheet");
-        var ws_data = [[]];
-        var ws = XLSX.utils.aoa_to_sheet(ws_data);
-        wb.Sheets["Hoja de Prueba"] = ws;
-        var wbout = XLSX.write(wb, { bookType: 'xlsx', type: 'binary' });
-        function s2ab(s) {
-    
+    wb.SheetNames.push("Test Sheet");
+    var ws_data = [['hello' , 'world']];
+    var ws = XLSX.utils.aoa_to_sheet(ws_data);
+    wb.Sheets["Test Sheet"] = ws;
+    var wbout = XLSX.write(wb, {bookType:'xlsx',  type: 'binary'});
+    function s2ab(s) {
+
             var buf = new ArrayBuffer(s.length);
             var view = new Uint8Array(buf);
-            for (var i = 0; i < s.length; i++) view[i] = s.charCodeAt(i) & 0xFF;
+            for (var i=0; i<s.length; i++) view[i] = s.charCodeAt(i) & 0xFF;
             return buf;
-    
-        }
-        $("#button-a").click(function () {
-            saveAs(new Blob([s2ab(wbout)], { type: "application/octet-stream" }), 'test.xlsx');
-        });
+            
+    }
+    $("#button-a").click(function(){
+            saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), 'test.xlsx');
+    });
 
 </script>
 </html>
