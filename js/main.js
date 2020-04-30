@@ -12,7 +12,7 @@
         hoja.appendRow([NC, Nombre]);
     }*/
 
-
+/*
 var wb = XLSX.utils.book_new();
 wb.Props = {
     Title: "Lenguajes y Automatas 2",
@@ -37,3 +37,7 @@ function s2ab(s) {
 $("#button-a").click(function () {
     saveAs(new Blob([s2ab(wbout)], { type: "application/octet-stream" }), 'test.xlsx');
 });
+*/
+function Regresar() { 
+    window.location = "https://victorandaya.github.io/Practica2-LyAII/";
+ }
