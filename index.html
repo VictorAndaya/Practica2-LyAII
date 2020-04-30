@@ -35,14 +35,14 @@
                 <input type="text" class="form-control datos" placeholder="Apellido Materno">
             </div>
 
-            <div class="col-md-6 mt-4 text-center">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option1">
-                    <label class="form-check-label">Hombre</label>
+            <div class="col-md-6 mt-4 text-center pt-2">
+                <div class="custom-control custom-radio custom-control-inline rad">
+                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input ">
+                    <label class="custom-control-label" for="customRadioInline1">Hombre</label>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option2">
-                    <label class="form-check-label">Mujer</label>
+                <div class="custom-control custom-radio custom-control-inline rad2">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">Mujer</label>
                 </div>
             </div>
 
@@ -86,32 +86,6 @@
         </div>
     </form>
 </body>
-<script>
-     
-    var wb = XLSX.utils.book_new();
-    wb.Props = {
-            Title: "SheetJS Tutorial",
-            Subject: "Test",
-            Author: "Red Stapler",
-            CreatedDate: new Date(2017,12,19)
-    };
-    
-    wb.SheetNames.push("Test Sheet");
-    var ws_data = [['hello' , 'world']];
-    var ws = XLSX.utils.aoa_to_sheet(ws_data);
-    wb.Sheets["Test Sheet"] = ws;
-    var wbout = XLSX.write(wb, {bookType:'xlsx',  type: 'binary'});
-    function s2ab(s) {
+<script lang="javascript" src="js/main.js"></script>
 
-            var buf = new ArrayBuffer(s.length);
-            var view = new Uint8Array(buf);
-            for (var i=0; i<s.length; i++) view[i] = s.charCodeAt(i) & 0xFF;
-            return buf;
-            
-    }
-    $("#button-a").click(function(){
-            saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), 'test.xlsx');
-    });
-
-</script>
 </html>
