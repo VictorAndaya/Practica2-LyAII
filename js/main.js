@@ -38,6 +38,3 @@ $("#button-a").click(function () {
     saveAs(new Blob([s2ab(wbout)], { type: "application/octet-stream" }), 'test.xlsx');
 });
 */
-function Regresar() { 
-    window.location = "https://victorandaya.github.io/Practica2-LyAII/";
- }
