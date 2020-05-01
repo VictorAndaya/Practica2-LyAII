@@ -16,11 +16,14 @@
 
 <body class="container col-md-8 bg-info">
     <h4 class="text-center mb-2 mt-2">DATOS DEL ALUMNO</h4>
-    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeZcpg9oXHPRbd3tXVcRdXzxa6xO-Gzfu-eXLzLcnxjvReQKw/formResponse" method="POST">
+    <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeZcpg9oXHPRbd3tXVcRdXzxa6xO-Gzfu-eXLzLcnxjvReQKw/formResponse"
+        method="POST">
         <div class="form-row">
             <div class="col-md-6 mb-2">
                 <label>Numero de Control</label>
-                <input type="text" class="form-control datos" id="NC" name="entry.698093619" placeholder="Numero de Control">
+                <input type="text" class="form-control datos" id="NC" name="entry.698093619"
+                    placeholder="Numero de Control">
             </div>
             <div class="col-md-6 mb-2">
                 <label>Nombre</label>
@@ -37,11 +40,13 @@
 
             <div class="col-md-6 mt-4 text-center pt-2">
                 <div class="custom-control custom-radio custom-control-inline rad">
-                    <input type="radio" id="customRadioInline1" name="entry.2006579720" value="Hombre" class="custom-control-input ">
+                    <input type="radio" id="customRadioInline1" name="entry.2006579720" value="Hombre"
+                        class="custom-control-input ">
                     <label class="custom-control-label" for="customRadioInline1">Hombre</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline rad2">
-                    <input type="radio" id="customRadioInline2" name="entry.2006579720" value="Mujer" class="custom-control-input">
+                    <input type="radio" id="customRadioInline2" name="entry.2006579720" value="Mujer"
+                        class="custom-control-input">
                     <label class="custom-control-label" for="customRadioInline2">Mujer</label>
                 </div>
             </div>
@@ -80,17 +85,22 @@
                 <label>Nombre</label>
                 <input type="text" class="form-control" name="entry.1930646295" placeholder="Nombre">
             </div>
-            <button type="submit" id="button-a" onclick="Redirigir();" class="btn btn-secondary mt-3 mb-5 btn-block">Enviar
-                Formulario</button>
-
+            <div class="col-md-6">
+                <button type="submit" id="button-a" class="btn btn-secondary btn-lg btn-block">Enviar
+                    Formulario</button>
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="btn btn-success btn-lg btn-block">Descargar Excel</button>
+            </div>
         </div>
     </form>
 </body>
 <script lang="javascript" src="js/main.js"></script>
 <script>
-    function Redirigir(){
-        window.location="https://victorandaya.github.io/Practica2-LyAII/";
+    function Redirigir() {
+        window.location = "https://victorandaya.github.io/Practica2-LyAII/";
     }
-    
+
 </script>
+
 </html>
