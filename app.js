@@ -4,7 +4,12 @@
 
 
 const input = document.querySelector('.NC');
+const nombre = document.querySelector('');
+const apePat = document.querySelector('');
+
+
 input.addEventListener('change', validate);
+
 function fecha() {
     var inicio = document.getElementById('fechaIni').value;
     var finalq = document.getElementById('fechaTer').value;
@@ -21,15 +26,14 @@ function fecha() {
     
 }
 
-
 function validate() {
 
     var NC = document.getElementById("NC").value
-    //var isValid = NC.match(/(0|1|9)\d(09)[0-4]\d\d\d$/) == null ? false : true;
-    //alert("Permitido: " + isValid);
-
-    if(NC.match(/(0|1|9)\d(09)[0-4]\d\d\d$/) == null){
-        alert("El NUMERO DE CONTROL no contiene el formato deseado");
+    if(NC.match(/(0|1|9)\d(09)[0-4]\d\d\d$/) == null || NC == ""){
+        input.classList.add('is-invalid');
+    }else{
+        input.classList.remove('is-invalid');
+        input.classList.add('is-valid');
     }
 }
 
