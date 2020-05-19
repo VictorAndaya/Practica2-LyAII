@@ -12,26 +12,27 @@
 
 <body class="container col-md-8 bg-info">
     <h4 class="text-center mb-2 mt-2">DATOS DEL ALUMNO</h4>
-    <form
+    <form onsubmit="return fecha()"
         action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeZcpg9oXHPRbd3tXVcRdXzxa6xO-Gzfu-eXLzLcnxjvReQKw/formResponse"
-        method="POST">
+        method="POST" id="id_formulario">
         <div class="form-row">
             <div class="col-md-6 mb-2">
                 <label>Numero de Control</label>
                 <input type="text" class="form-control datos NC" id="NC" name="entry.698093619"
                     placeholder="Numero de Control" required>
+                    <div class="invalid-feedback text-center">Introduzca un Numero de control valido</div>
             </div>
             <div class="col-md-6 mb-2">
                 <label>Nombre</label>
-                <input type="text" class="form-control datos" id="Nombre" name="entry.738061722" placeholder="Nombre" required>
+                <input type="text" class="form-control datos" id="Nombre" onkeypress="return check(event)" name="entry.738061722" placeholder="Nombre" required>
             </div>
             <div class="col-md-6 mb-2">
                 <label>Apellido Paterno</label>
-                <input type="text" class="form-control datos" name="entry.1918946839" placeholder="Apellido Paterno" required>
+                <input type="text" class="form-control datos" onkeypress="return check(event)" name="entry.1918946839" placeholder="Apellido Paterno" required>
             </div>
             <div class="col-md-6 mb-2">
                 <label>Apellido Materno</label>
-                <input type="text" class="form-control datos" name="entry.1921668631" placeholder="Apellido Materno" required>
+                <input type="text" class="form-control datos" onkeypress="return check(event)" name="entry.1921668631" placeholder="Apellido Materno" required>
             </div>
 
             <div class="col-md-6 mt-4 text-center pt-2">
@@ -71,18 +72,18 @@
 
             <div class="col-md-6 mb-2">
                 <label>Apellido Paterno</label>
-                <input type="text" class="form-control" name="entry.1727488598" placeholder="Apellido Paterno" required>
+                <input type="text" class="form-control" onkeypress="return check(event)" name="entry.1727488598" placeholder="Apellido Paterno" required>
             </div>
             <div class="col-md-6 mb-2">
                 <label>Apellido Materno</label>
-                <input type="text" class="form-control" name="entry.197088098" placeholder="Apellido Materno" required>
+                <input type="text" class="form-control" onkeypress="return check(event)" name="entry.197088098" placeholder="Apellido Materno" required>
             </div>
             <div class="col-md-12 mb-2">
                 <label>Nombre</label>
-                <input type="text" class="form-control" name="entry.1930646295" placeholder="Nombre" required>
+                <input type="text" class="form-control" onkeypress="return check(event)" name="entry.1930646295" placeholder="Nombre" required>
             </div>
             <div class="col-md-6">
-                <button type="submit" id="button-a" class="btn btn-secondary btn-lg btn-block" onclick="fecha()">Enviar
+                <button type="submit" id="button-a" class="btn btn-secondary btn-lg btn-block">Enviar
                     Datos</button>
             </div>
             <div class="col-md-6">
