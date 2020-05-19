@@ -18,7 +18,7 @@
         <div class="form-row">
             <div class="col-md-6 mb-2">
                 <label>Numero de Control</label>
-                <input type="text" class="form-control datos" id="NC" name="entry.698093619"
+                <input type="text" class="form-control datos NC" id="NC" name="entry.698093619"
                     placeholder="Numero de Control" required>
             </div>
             <div class="col-md-6 mb-2">
@@ -59,12 +59,12 @@
 
             <div class="col-md-6 mb-2">
                 <label>Fecha de inicio</label>
-                <input type="date" class="form-control" name="entry.1273226235" placeholder="Fecha de inicio" required>
+                <input type="date" class="form-control" id="fechaIni" name="entry.1273226235" placeholder="Fecha de inicio" required>
             </div>
 
             <div class="col-md-6 mb-2">
                 <label>Fecha de termino</label>
-                <input type="date" class="form-control" name="entry.152779434" placeholder="Fecha de termino" required>
+                <input type="date" class="form-control" id="fechaTer" name="entry.152779434" placeholder="Fecha de termino" required>
             </div>
 
             <h4 class="text-center col-md-12 mb-2 mt-2">DATOS DEL ASESOR</h4>
@@ -82,7 +82,7 @@
                 <input type="text" class="form-control" name="entry.1930646295" placeholder="Nombre" required>
             </div>
             <div class="col-md-6">
-                <button type="submit" id="button-a" class="btn btn-secondary btn-lg btn-block">Enviar
+                <button type="submit" id="button-a" class="btn btn-secondary btn-lg btn-block" onclick="fecha()">Enviar
                     Datos</button>
             </div>
             <div class="col-md-6">
@@ -91,4 +91,5 @@
         </div>
     </form>
 </body>
+<script src="app.js"></script>
 </html>
