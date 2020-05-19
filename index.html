@@ -18,17 +18,17 @@
         <div class="form-row">
             <div class="col-md-6 mb-2">
                 <label>Numero de Control</label>
-                <input type="text" class="form-control datos NC" id="NC" name="entry.698093619"
+                <input type="text" class="form-control NC" onkeypress="return only(event)" id="NC" minlength="8" maxlength="8" name="entry.698093619"
                     placeholder="Numero de Control" required>
-                    <div class="invalid-feedback text-center">Introduzca un Numero de control valido</div>
+                    <div class="invalid-feedback p-1">Introduzca un Numero de control valido</div>
             </div>
             <div class="col-md-6 mb-2">
                 <label>Nombre</label>
-                <input type="text" class="form-control datos" id="Nombre" onkeypress="return check(event)" name="entry.738061722" placeholder="Nombre" required>
+                <input type="text" class="form-control datos" id="Nombre" onkeypress="return check(event)" minlength="1" name="entry.738061722" placeholder="Nombre" required>
             </div>
             <div class="col-md-6 mb-2">
                 <label>Apellido Paterno</label>
-                <input type="text" class="form-control datos" onkeypress="return check(event)" name="entry.1918946839" placeholder="Apellido Paterno" required>
+                <input type="text" class="form-control datos" id="ApePat"  onkeypress="return check(event)" name="entry.1918946839" placeholder="Apellido Paterno" required>
             </div>
             <div class="col-md-6 mb-2">
                 <label>Apellido Materno</label>
@@ -72,15 +72,15 @@
 
             <div class="col-md-6 mb-2">
                 <label>Apellido Paterno</label>
-                <input type="text" class="form-control" onkeypress="return check(event)" name="entry.1727488598" placeholder="Apellido Paterno" required>
+                <input type="text" class="form-control datos" onkeypress="return check(event)" name="entry.1727488598" placeholder="Apellido Paterno" required>
             </div>
             <div class="col-md-6 mb-2">
                 <label>Apellido Materno</label>
-                <input type="text" class="form-control" onkeypress="return check(event)" name="entry.197088098" placeholder="Apellido Materno" required>
+                <input type="text" class="form-control datos" onkeypress="return check(event)" name="entry.197088098" placeholder="Apellido Materno" required>
             </div>
             <div class="col-md-12 mb-2">
                 <label>Nombre</label>
-                <input type="text" class="form-control" onkeypress="return check(event)" name="entry.1930646295" placeholder="Nombre" required>
+                <input type="text" class="form-control datos" onkeypress="return check(event)" name="entry.1930646295" placeholder="Nombre" required>
             </div>
             <div class="col-md-6">
                 <button type="submit" id="button-a" class="btn btn-secondary btn-lg btn-block">Enviar
