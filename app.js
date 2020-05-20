@@ -59,7 +59,7 @@ function check(e) {
     }
 
     // Patron de entrada, en este caso solo acepta numeros y letras
-    patron = /[\SA-Za-z]|[A-Za-z\s]/;
+    patron = /[A-Za-z\s]/;
     tecla_final = String.fromCharCode(tecla);
     return patron.test(tecla_final);
 }
